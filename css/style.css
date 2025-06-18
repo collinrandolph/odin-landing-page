@@ -1,0 +1,146 @@
+:root {
+  --dark-navy: #1f2937;
+  --blue: #3882f6;
+  --white-header: #f9faf8;
+  --white-body: #e5e7eb;
+  --light-gray: #e5e7eb;
+  --black-header: #1f2937;
+  --black-quote: #1f2937;
+  --default-padding: 12px;
+  --padding-scale: 2;
+  --larger-padding: calc(var(--default-padding) * var(--padding-scale));
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 18px;
+}
+
+h3 {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#header,
+#hero-section {
+  background-color: var(--dark-navy);
+  color: var(--white-body);
+}
+#info-section {
+  background-color: var(--white-header);
+  color: var(--black-header);
+}
+#testimonial-section {
+  background-color: var(--light-gray);
+  color: var(--black-quote);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 var(--default-padding);
+}
+
+#header ul {
+  display: flex;
+  gap: var(--larger-padding);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#hero-section {
+  padding: var(--larger-padding) var(--default-padding);
+  display: flex;
+  align-items: center;
+}
+#hero-section img {
+  flex: 1 1 50%;
+  height: 400px;
+  background: var(--light-gray);
+  border-radius: 4px;
+}
+
+#info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--larger-padding) var(--default-padding);
+  background-color: var(--white-header);
+}
+.info-list {
+  display: flex;
+  gap: var(--larger-padding);
+}
+.info-item {
+}
+.info-item img {
+  width: 100%;
+  height: 200px;
+  background: var(--light-gray);
+  border-radius: 4px;
+}
+
+#testimonial-section {
+  padding: var(--larger-padding) var(--default-padding);
+}
+
+#cta-section {
+  padding: var(--larger-padding) var(--default-padding);
+  background-color: var(--white-header);
+}
+.cta-container {
+  background-color: var(--blue);
+  color: var(--white-body);
+  padding: var(--larger-padding);
+}
+
+button {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.9px;
+  padding: var(--default-padding) var(--larger-padding);
+}
+button a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+button.solid-button {
+  background-color: var(--blue);
+  color: var(--white-header);
+  border: 2px solid var(--blue);
+}
+
+button.outline-button {
+  background-color: transparent;
+  color: var(--white-header);
+  border: 2px solid var(--white-header);
+}
