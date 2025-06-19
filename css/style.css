@@ -12,7 +12,7 @@
   --default-padding: 12px;
   --padding-scale: 2;
   --larger-padding: calc(var(--default-padding) * var(--padding-scale));
-  --largest-padding: calc(var(--larger-padding) * var(--padding-scale));
+  --largest-padding: calc(var(--default-padding) * pow(var(--padding-scale),2));
   /*Global Fonts */
   --main-font: "Roboto", sans-serif;
   --accent-font: serif;
@@ -26,29 +26,23 @@
 
 h1 {
   font-size: calc(
-    var(--base-font-size) * var(--font-scale) * var(--font-scale) *
-      var(--font-scale)
+    var(--base-font-size) * pow(var(--font-scale),3)
   );
   font-family: var(--accent-font);
 }
 
 h2 {
   font-size: calc(
-    var(--base-font-size) * var(--font-scale) * var(--font-scale)
+    var(--base-font-size) * pow(var(--font-scale),2)
   );
-}
-
-p {
-  font-size: calc(var(--base-font-size));
 }
 
 h3 {
   font-size: calc(var(--base-font-size) * var(--font-scale));
 }
 
-body {
-  margin: 0;
-  padding: 0;
+p {
+  font-size: calc(var(--base-font-size));
 }
 
 .button {
@@ -76,7 +70,6 @@ body {
   border: 2px solid var(--blue);
 }
 
-
 .button.outline-button {
   background-color: transparent;
   color: var(--white-header);
@@ -88,6 +81,10 @@ body {
   border: 2px solid var(--white-header);
 }
 /* MAIN LAYOUT STYLES */
+body {
+  margin: 0;
+  padding: 0;
+}
 #wrapper {
   display: flex;
   flex-direction: column;
@@ -233,7 +230,7 @@ body {
 
 @media screen and (max-width: 800px) {
   :root {
-    --font-scale: 1.25;
+    --font-scale: 1.22;
   }
 
   #hero-section .section-container{
